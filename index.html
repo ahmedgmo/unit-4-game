@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900|Merienda" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="assets/javascript/script.js"></script>
 </head>
 
@@ -30,14 +31,18 @@
             <button id="startButton">Start Game</button>
         </div>
         <div id="numberDisplay">
-            <p id="randomNumbr"></p>
+            <p>Your target score:</p>
+            <p id="targetScore"></p>
         </div>
         <div id="results">
             <p id="wins">Wins: </p>
             <p id="losses">Losses: </p>
         </div>
         <div id="crystals">
-
+            <img src="assets/images/redgem.png" alt="" class="crystal-values" id="redGem">
+            <img src="assets/images/bluegem.png" alt="" class="crystal-values" id="blueGem">
+            <img src="assets/images/purplegem.png" alt="" class="crystal-values" id=" purpleGem">
+            <img src="assets/images/orangegem.png" alt="" class="crystal-values" id="orangeGem">
         </div>
         <div id="currentDisplay">
             <p id="scorePreset">Your current score is:</p>

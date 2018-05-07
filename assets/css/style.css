@@ -70,7 +70,32 @@ span {
 p {
     font-family: 'Merienda', sans-serif, cursive;
     font-size: 1rem;
+    margin-left: 1rem;
     opacity: 1;
     color: black;
+    font-weight: bold;
 }
 
+div#crystals {
+    width: 100%;
+    text-align: center;
+}
+
+img {
+    margin: 0 1rem;
+    opacity: 1;
+}
+
+#currentScore {
+    padding: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+p#targetScore {
+    padding: inherit;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+    color: red;
+}

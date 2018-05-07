@@ -2,29 +2,53 @@ var wins = 0;
 var losses = 0;
 var gameStart = false;
 var currentScore = 0;
+var crystals = [
+    redCrystal = {
+        index: 0,
+        color: "red",
+        img: "redGem.png"
+    },
+    blueCrystal = {
+        index: 1,
+        color: "blue",
+        img: "blueGem.png"
+    },
 
-function startGame() {
-    gameStart = true;
+    purpleCrystal = {
+        index: 2,
+        color: "blue",
+        img: "purpleGem.png"
+    },
 
-    var randomNum = Math.floor(Math.random() * 120) + 19;
-    console.log(randomNum);
+    orangeCrystal = {
+        index: 3,
+        color: "blue",
+        img: "orangeGem.png"
+    },
+]
 
-    //ES6 stackoverflow researched solutions
-    var crystalValues = Array.from({length: 4}, () => Math.floor(Math.random() * 12) + 1);
-    console.log(crystalValues);
+$(function () {
+    $('#startButton').click(function () {
+        startGame();
+    });
+    function startGame() {
+        gameStart = true;
 
-    for(var i = 0; i < crystalValues; i++) {
-        var imageCrystal = $("<p>");
-        imageCrystal.addClass("crystal-values");
-        // imageCrystal.attr("src", "assets/images/" + crystalValues[i] + ".png");
-        imageCrystal.attr("data-crystalValue", crystalValues[i])
-        $('#crystals').append(imageCrystal);
+        var randomNum = Math.floor(Math.random() * 120) + 19;
+        console.log(randomNum);
+
+        //ES6 stackoverflow researched solutions
+        var crystalValues = Array.from({ length: 4 }, () => Math.floor(Math.random() * 12) + 1);
+        console.log(crystalValues);
+
+        for (var i = 0; i < crystalValues; i++) {
+                crystals[i].index = crystalValues[i];
+        }
+
+        $('#targetScore').text(randomNum);
+
     }
+});
 
-    $('#targetScore').text(randomNum);
-
-}
-
-$(function(){
-    $('#startButton').click(startGame());
-  })
+$(function() {
+})

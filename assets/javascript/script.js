@@ -52,3 +52,11 @@ $(function () {
 
 $(function() {
 })
+
+//Pseudo-coding the rest
+// create a on click event for each gem that adds the value of the gem to the counter
+// display counter under the element ID #currentScore
+// create an if conditional that compares currentScore value against targetScore
+// if current score is less, continue play.
+// if current score is more than targetScore, end game, print "You lose", losses increase by one.
+// if current score equals target score, end game, pring "you win", wins increase by one.
